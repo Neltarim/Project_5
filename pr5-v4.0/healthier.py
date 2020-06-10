@@ -106,8 +106,12 @@ class main():
             print("{} :{}".format(nbr, prod.generic_name))
 
         choice = self.question("Pick a product to substitute ")
-        choice = int(choice) - 1
+        if choice != "":
+            choice = int(choice) - 1
 
+        else:
+            pass
+        
         if choice < 0 or choice > nbr-1:
             print("wrong argument ...")
             self.wait()
@@ -150,7 +154,11 @@ class main():
 
         print()
         choice = self.question("Pick a substitution to see more ")
-        choice = int(choice) - 1
+        if choice != "":
+            choice = int(choice) - 1
+
+        else:
+            pass
 
         if choice < 0 or choice > i-1:
             print("wrong argument ...")
@@ -164,16 +172,16 @@ class main():
 
         self.clear_screen()
         print("PRIMARY PRODUCT : \n")
-        print("         - Name : " + primary_prod.generic_name)
-        print("         - Categorie : " + primary_prod.categorie)
-        print("         - Image url : " + primary_prod.image_url)
-        print("         - Nutri grade : " + primary_prod.nutrition_grade)
+        print("         - Name : " + prime_prod.generic_name)
+        print("         - Categorie : " + prime_prod.categorie)
+        print("         - Image url : " + prime_prod.image_url)
+        print("         - Nutri grade : " + prime_prod.nutrition_grade)
         
         print("\n\n SUBSTITUTION PRODUCT :\n")
-        print("         - Name : " + sub.generic_name)
-        print("         - Categorie : " + sub.categorie)
-        print("         - Image url : " + sub.image_url)
-        print("         - Nutri grade : " + sub.nutrition_grade)
+        print("         - Name : " + sub_prod.generic_name)
+        print("         - Categorie : " + sub_prod.categorie)
+        print("         - Image url : " + sub_prod.image_url)
+        print("         - Nutri grade : " + sub_prod.nutrition_grade)
 
         self.wait()
 
